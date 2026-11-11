@@ -111,3 +111,5 @@ Chrome or Edge: open `chrome://extensions`, turn on Developer mode, choose "Load
 ## License and source
 
 Public source: https://github.com/clonemyai (extension repository). Spec: EXTENSION_SPEC.md in the clonemy.ai project files.
+
+License: the extension code in this repository is source-available for inspection and evaluation only, under the terms in LICENSE (Copyright (c) 2026 clonemy.ai, all rights reserved; no license is granted to use, copy, modify, publish, distribute, sublicense, or sell the code). The Capsule Format specification is licensed separately under the Creative Commons Attribution 4.0 International License (CC BY 4.0); that license applies to the format specification only, not to the code in this repository.
