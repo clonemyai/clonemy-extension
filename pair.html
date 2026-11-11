@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>clonemy.ai: send a capsule to your phone</title>
+<style>
+  body { margin: 0; padding: 28px 20px 44px; background: #f7f7fd; color: #17171f; font: 15px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .page { max-width: 560px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  p { margin: 8px 0; opacity: .9; }
+  .box { background: #ffffff; border: 1px solid rgba(90,72,224,.2); border-radius: 14px; padding: 18px; margin-top: 16px; }
+  label { display: block; font-weight: 700; margin: 4px 0 6px; }
+  select { width: 100%; box-sizing: border-box; padding: 8px; border-radius: 8px; border: 1px solid rgba(90,72,224,.35); background: transparent; color: inherit; font: inherit; }
+  .qrwrap { background: #ffffff; border-radius: 12px; padding: 18px; width: fit-content; margin: 14px auto 6px; }
+  .qrwrap svg { display: block; }
+  .bigcode { text-align: center; font-size: 46px; font-weight: 800; letter-spacing: .16em; margin: 8px 0 2px; }
+  .timer { text-align: center; opacity: .7; font-size: 13px; }
+  .status { margin-top: 12px; min-height: 1.5em; }
+  .status.err { color: #c2244e; }
+  .bar { height: 8px; background: #efeef7; border-radius: 99px; overflow: hidden; margin-top: 12px; }
+  .bar > i { display: block; height: 100%; width: 0; background: linear-gradient(90deg,#7b6cff,#37c8e8 55%,#ff5ea8); transition: width .18s ease; }
+  button { margin-top: 12px; padding: 8px 14px; border-radius: 8px; border: 1px solid rgba(14,127,168,.55); background: rgba(90,72,224,.12); color: #17171f; font-weight: 700; cursor: pointer; font: inherit; }
+  .fine { font-size: 13px; opacity: .7; }
+  a { color: #0e7fa8; }
+  [hidden] { display: none !important; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #10101c; color: #eaf2ff; }
+    .box { background: #141424; border-color: rgba(140,150,255,.22); }
+    select { border-color: rgba(140,150,255,.35); }
+    .bar { background: #10101c; }
+    button { border-color: rgba(55,200,232,.55); background: rgba(123,108,255,.16); color: #eaf2ff; }
+    .status.err { color: #ff7a9c; }
+    a { color: #7ee2ff; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Send a capsule to your phone</h1>
+  <p>Scan the code below with your phone. Its browser opens the clonemy shuttle with the code already filled in; tap Connect there, and this page names the capsule and waits. Nothing moves until the phone accepts the named offer, and the capsule crosses directly between this browser and the phone. Keep this tab open until the transfer finishes.</p>
+
+  <div class="box" id="pickBox">
+    <label for="vaultPick">Capsule to send</label>
+    <select id="vaultPick"></select>
+    <p class="fine" id="vaultNote"></p>
+  </div>
+
+  <div class="box" id="codeBox" hidden>
+    <div class="qrwrap" id="qrBox" aria-label="QR code for the shuttle rendezvous"></div>
+    <div class="bigcode" id="pairCode">······</div>
+    <div class="timer" id="pairTimer">Registering the code…</div>
+    <p class="status" id="pairStatus" role="status">Starting…</p>
+    <div class="bar" id="pairBarWrap" hidden><i id="pairBar"></i></div>
+    <button id="pairAgain" type="button" hidden>Start over with a fresh code</button>
+    <p class="fine">No camera? On the phone, open <a href="https://clonemy.ai/shuttle.html" target="_blank" rel="noopener">clonemy.ai/shuttle.html</a> and type the six characters instead. The code works once and dies ten minutes from when it appeared.</p>
+    <p class="fine">What crosses where: the file travels straight between the two browsers, encrypted in transit by WebRTC, and is never stored on a server. A public rendezvous service, the PeerJS broker, matches the code to the two browsers; it can see the code, both IP addresses, and the time, and it cannot see the file. The full explanation stands on the <a href="https://clonemy.ai/shuttle.html" target="_blank" rel="noopener">shuttle page</a>.</p>
+  </div>
+</div>
+<script src="peerjs.min.js"></script>
+<script src="qrcode.min.js"></script>
+<script src="pair.js"></script>
+</body>
+</html>

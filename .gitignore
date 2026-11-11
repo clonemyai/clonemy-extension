@@ -1,0 +1,13 @@
+# Release packages: the store zips are attached to GitHub Releases
+# instead of carried in the tree (the tree is the source they are
+# built from).
+*.zip
+
+# Stale local backups, never part of a release.
+*.bak-*
+
+# Raw store-screenshot captures: unedited captures of a personal
+# browser session (bookmarks, avatar, live session URLs). The
+# processed shot-*.png files in the same folder are the
+# store-ready versions and are included.
+store-shots-0.5.14/raw-*

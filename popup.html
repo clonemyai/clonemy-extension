@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>clonemy.ai</title>
+<style>
+  body { width: 320px; margin: 0; padding: 14px; background: #f7f7fd; color: #17171f; font: 13px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  h1 { font-size: 15px; margin: 0 0 4px; }
+  p { margin: 6px 0; opacity: .88; }
+  .row { display: flex; justify-content: space-between; border-top: 1px solid rgba(90,72,224,.18); padding: 6px 0; }
+  .row b { font-weight: 700; }
+  .tag { color: #0e7fa8; font-weight: 700; }
+  button { margin-top: 10px; padding: 7px 10px; border-radius: 8px; border: 1px solid rgba(14,127,168,.55); background: rgba(90,72,224,.12); color: #17171f; font-weight: 700; cursor: pointer; }
+  a { color: #0e7fa8; }
+  #offer { border: 1px solid rgba(224,61,134,.5); border-radius: 10px; padding: 8px 10px; margin: 10px 0; display: none; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #10101c; color: #eaf2ff; }
+    .row { border-top-color: rgba(140,150,255,.18); }
+    .tag, a { color: #7ee2ff; }
+    button { border-color: rgba(55,200,232,.55); background: rgba(123,108,255,.16); color: #eaf2ff; }
+    #offer { border-color: rgba(255,120,200,.5); }
+  }
+</style>
+</head>
+<body>
+  <h1>clonemy.ai</h1>
+  <p>Open one of your AI chats (ChatGPT, Claude, Gemini, Grok, Perplexity, Muse, Meta AI) and use the clonemy bar in the corner of the tab. Everything happens in the tab. The one exception is the optional browser sync below, off unless you turn it on.</p>
+
+  <div id="offer"></div>
+
+  <p><b>What this extension knows</b><br />A tally of which AI sites you use, counted on this machine only, so it can tell your regular AI from a one-time visit. It never leaves this browser. When you compile a capsule, it also waits here, on this machine only, for up to a day so another AI tab can offer it to you; discard it from the bar at any time. Your latest capsule from each AI is kept in a vault here, versioned, until you forget it from the bar, and the extension notes which version each AI last received so it can offer you updates. If you turn on browser sync, your vault also rides your browser's own sync (Chrome Sync) as encrypted chunks protected by that sync phrase; the carrier sees sizes and timing, never content.</p>
+
+  <div style="border-top:1px solid rgba(90,72,224,.18);margin-top:10px;padding-top:8px">
+    <p><b>Send to phone</b><br />Carry a capsule from your vault to your phone. A tab opens with a QR code; scan it with the phone, and the phone accepts before anything moves.</p>
+    <button id="pair-open" type="button">Send to phone</button>
+  </div>
+  <div style="border-top:1px solid rgba(90,72,224,.18);margin-top:10px;padding-top:8px">
+    <p><b>Browser sync</b> (experimental)<br />Keep your capsule vault current across your own browsers. Capsules are encrypted with a sync phrase the extension creates for you, and carried by your browser's built-in sync. clonemy runs no server and sees nothing.</p>
+    <div id="sync-off">
+      <button id="sync-create" type="button">Create my sync phrase</button>
+      <p style="margin:8px 0 2px">Already have a sync phrase from another browser?</p>
+      <input id="sync-pass" type="text" placeholder="six words, spaces between" autocomplete="off" style="width:100%;box-sizing:border-box;padding:7px;border-radius:8px;border:1px solid rgba(90,72,224,.35);background:transparent;color:inherit" />
+      <button id="sync-on" type="button">Use this phrase</button>
+      <button id="sync-filebtn" type="button">Use the phrase file instead</button>
+      <input id="sync-file" type="file" accept=".txt,text/plain" style="display:none" />
+    </div>
+    <p id="sync-status"></p>
+    <div id="sync-phrasebox" style="display:none">
+      <p>Your sync phrase:<br /><b id="sync-phrase"></b></p>
+      <button id="sync-copy" type="button">Copy phrase</button>
+      <button id="sync-download" type="button">Save phrase as a .txt file</button>
+      <p>Enter it once on each of your other browsers. Anyone who has it can open your synced capsules, so keep it like a password.</p>
+    </div>
+    <button id="sync-show" type="button" style="display:none">Show my sync phrase</button>
+    <button id="sync-disable" type="button" style="display:none">Turn off browser sync</button>
+    <p id="sync-note"></p>
+  </div>
+  <div id="tally"><p>No visits counted yet.</p></div>
+  <button id="erase" type="button">Erase my counts</button>
+
+  <p style="margin-top:12px"><a href="https://clonemy.ai" target="_blank" rel="noopener">clonemy.ai</a> · <a href="https://github.com/clonemyai" target="_blank" rel="noopener">Read the source</a></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

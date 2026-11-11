@@ -1,0 +1,4 @@
+9ec33ef420fe1f7e29d384bf2157a764  content.js
+d9b62dad6b8f1e2cc7eafedcc90c656f  compiler.js
+b95417941c90991ace0fd77768702db4  extract-doc.js
+c03dd0545a563a55961e0d41c9866303  manifest.json

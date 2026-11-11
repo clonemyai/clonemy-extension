@@ -1,0 +1,58 @@
+CLONEMY.AI CHROME WEB STORE SUBMISSION, v0.5.13
+Prepared 2026-11-09. Paste blocks below, exactly as fenced.
+
+=== NAME (unchanged) ===
+clonemy.ai: clone your AI
+
+=== SUMMARY (132 char limit, this line is 120) ===
+Your Capsule. A(i) personality, in a file, yours to keep. Forever. Compile your AI's self-report into a capsule you own.
+
+=== CATEGORY ===
+Productivity
+
+=== LANGUAGE ===
+English
+
+=== DETAILED DESCRIPTION (paste everything between the fences) ===
+```
+Your Capsule. A(i) personality, in a file, yours to keep. Forever.
+
+Everyone on this topic is focused on files, storage and byte for byte transfer. clonemy is trying to transfer vibes: the calibrated pattern your AI built with you, its persona with you, your rules, your judgement, and its voice with you. An export can move your logs perfectly and still leave that pattern behind. The capsule carries the pattern in a plain Markdown file because a file is what you can hold, read, and carry yourself. The file is the container, not the point.
+
+The intake is one prompt and one send, and it starts by making sure there is something to transfer:
+
+1. Prime and extract, in one fill. One click puts the whole request into the chat box, full document up front. The extension never presses send. You do. The ask is framed as your own homework assignment: learning how you and your AI interact, written down before you go. The first line is a jog, a recall question you can swap for a moment of your own, that makes the AI search its history before it writes. The shipped example asks about a chat where you told it to put the dog away. If that moment never happened, the AI must say so plainly and never invent it, and it records that receipt, and the sources it checked, at the top of its report. The document behind the jog is written as your wants page, not a system template, and the copy the AI reads has the human instructions taken out of it entirely. It asks for all 12 sections of the Capsule Format, one line per fact, every section finished before any is expanded.
+2. Watch, grade, and warn if it came back empty. The extension watches the answer arrive and narrates the wait, even folded down: waiting, a live section count, still arriving, and found. It grades the recall answer at the head of the reply and, separately, how much of the report actually came back. This matters because the same AI can return a rich report from one session and an honestly empty one, 11 of 12 sections empty or missing, from another, when a session never loaded its memory of you. If the yield is empty, the bar warns you before you compile an empty capsule. Compile stays available if you want the empty file on purpose, and a missed jog moment over a rich report compiles normally.
+3. Compile it, in the tab. When the report settles, the bar opens itself and lights Compile. One click compiles the report locally into capsule.md and downloads it. Nothing is uploaded, because nothing leaves the browser. Install that file into any other AI with the line it carries, and the new AI picks up as your AI. Every capsule ends with a self-check the new AI answers from the capsule alone, a prediction round you grade in one line, and a voice round graded the same way, so the pattern is verified against you, not just hoped for.
+
+Your latest capsule from each AI is kept in a vault in your browser, versioned, so when you recompile, the extension names the sections that changed and offers the update to your other AIs instead of silently replacing anything.
+
+BROWSER SYNC
+Turn it on in the popup and your capsule vault stays current across your own browsers. The extension issues you a six-word sync phrase, encrypts the vault with it, and your browser's own sync carries the ciphertext. clonemy.ai runs no server and sees nothing. Anyone with the phrase can open the synced capsules, so keep it like a password. Sync is off unless you turn it on, and your capsules are never paywalled or held hostage: the local vault and the file are always yours.
+
+Nothing leaves your browser. The watcher, the grading, and the compiler all run locally in the tab. The extension makes zero network requests of its own.
+
+What is stored, all of it in your browser: a small usage tally (which of your AIs you use, counted by days and sessions, so the extension can recognize your regular AI; the popup shows it in plain numbers with an erase button), a compiled capsule waiting up to a day to be offered to your other AI tabs (discard it from the bar at any time), and your capsule vault (forget any capsule from the bar at any time). If you turn on browser sync, encrypted chunks of the vault also ride your browser's own sync storage, as described above.
+
+The major AI assistants are supported. The bar appears inside your chats on the supported AI sites and nowhere else on the web.
+
+The Capsule Format is open and published at clonemy.ai/format. The spec is published under CC BY 4.0 at DOI 10.5281/zenodo.24049746. A capsule compiled by this extension and a capsule compiled on the website are the same artifact.
+```
+
+=== PRIVACY TAB ANSWERS ===
+
+Single purpose:
+Extract the user's AI self-report on supported AI sites and compile it into a portable capsule file, locally in the tab.
+
+Permission justification, storage:
+The extension stores, in the browser only: a per-site usage tally (sessions and days) so it can tell which AI the user relies on; a compiled capsule held locally for up to a day so it can be offered to the user's other AI tabs; the user's capsule vault (the latest compiled capsule per AI, versioned) in browser-local storage; and, only if the user turns browser sync on, encrypted chunks of that vault in the browser's own sync storage, encrypted with a key derived from a six-word phrase the extension issues and never stores. The popup displays the tally in plain numbers with an erase button, any capsule can be forgotten from the bar, and sync is off by default. Nothing is transmitted to clonemy.ai or any third party.
+
+Permission justification, host access (the supported AI sites):
+Required to show the clonemy bar on those pages, fill the chat box with the extraction request at the user's click, and read the AI's self-report from the page so it can be compiled locally.
+
+Data collected: none. No user data is collected, transmitted, sold, or shared by the developer. There is no analytics or telemetry. The extension's own code makes no network requests; the optional browser sync rides the browser's own sync storage with encrypted data only, as described above.
+
+Remote code: none. All code is in the package.
+
+=== GRAPHICS ===
+Leave the existing listing graphics, screenshots, and promo tiles unchanged in this submission. Do not change the Support toggle or any other listing setting.

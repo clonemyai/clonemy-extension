@@ -1,0 +1,39 @@
+STORE SUMMARY (the store allows 132 characters; the summary line below is exactly 120 characters)
+Your Capsule. A(i) personality, in a file, yours to keep. Forever. Compile your AI's self-report into a capsule you own.
+
+================================================================
+
+DETAILED DESCRIPTION (paste from the hook line to the end)
+
+Your Capsule. A(i) personality, in a file, yours to keep. Forever.
+
+THE PROBLEM
+You have spent months teaching your AI how you work: your preferences, your rules, your people, your projects. Switch AIs and all of that stays behind, locked inside one company's product. Starting over means re-teaching everything, from memory, by hand.
+
+WHAT CLONEMY.AI DOES
+This extension lives inside your AI's chat tab and walks you through three steps:
+
+1. Put the request in. One click places the clonemy.ai extraction request into the chat box. The extension never presses send. You do.
+2. Your AI writes its self-report. It answers with a structured document in the open Capsule Format: who it is to you, your preferences, your rules, your people, your projects and open loops, and its voice with you, across 12 sections.
+3. Compile it, in the tab. The extension recognizes the finished report, compiles it locally into one file, capsule.md, and downloads it. Nothing is uploaded, because nothing leaves the browser.
+
+Then take it anywhere. Open any other supported AI and the bar offers the capsule it is holding: one click puts it into the chat box, install line first, ready for you to press send. Your latest capsule from each AI is kept in a vault in your browser, versioned, so when you recompile, the extension names the sections that changed and offers the update to your other AIs instead of silently replacing anything. Or send a capsule to your phone: the popup opens a shuttle page showing a one-time code and a QR code, your phone accepts the named capsule, and it crosses directly between the two browsers.
+
+NEW: BROWSER SYNC
+Turn it on in the popup and your capsule vault stays current across your own browsers. The extension issues you a six-word sync phrase, encrypts the vault with it, and your browser's own sync carries the ciphertext. clonemy.ai runs no server and sees nothing. Anyone with the phrase can open the synced capsules, so keep it like a password. Sync is off unless you turn it on, and your capsules are never paywalled or held hostage: the local vault and the file are always yours.
+
+WHY IT IS DIFFERENT
+You own the file. A capsule is a plain document on your own disk, yours to keep, back up, and recompile whenever the relationship changes. It is not a setting buried inside someone else's product.
+The format is open. The Capsule Format is published at clonemy.ai/format, and a capsule compiled by this extension is the same artifact as one compiled on the website.
+It works across AIs. One capsule moves between different AI assistants instead of living inside a single one.
+It is tested like it matters. Every capsule ends with a self-check the new AI answers from the capsule alone, then a prediction round: it makes three predictions about you, a preference, a judgement call, and a first move, in situations it has never seen. You grade all three in one line (yes, yes, no). Then the voice round: it answers one ordinary prompt in the voice the capsule installed, and you grade that in one line too, sounds like them or sounds new. Any miss becomes a saved correction, with the rule restated, in the same sitting. A moved AI is verified against you, not just hoped for.
+
+PRIVACY, PLAINLY
+Almost nothing leaves your browser, and what does is aimed by you. The extraction, the watching, and the compiling make zero network requests of their own: no fetch, no XMLHttpRequest, no analytics, no telemetry. The code is plain, readable JavaScript, and anyone can inspect it and check. Two features move data only where you point them. Browser sync, below, rides your browser's own sync as encrypted chunks. The phone shuttle, opened from the popup, sends a capsule from this browser to your own phone: a public rendezvous service, the PeerJS broker, matches a one-time code to the two browsers and can see the code, both IP addresses, and the time, never the file; the capsule crosses directly between the two browsers, encrypted in transit, and only after the phone accepts the named offer.
+What is stored, all of it in your browser: a small usage tally (which of your AIs you use, counted by days and sessions, so the extension can recognize your regular AI; the popup shows it in plain numbers with an erase button), a compiled capsule waiting up to a day to be offered to your other AI tabs (discard it from the bar at any time), and your capsule vault (forget any capsule from the bar at any time). If you turn on browser sync, encrypted chunks of the vault also ride your browser's own sync storage, as described above.
+Permissions are exactly two kinds: storage, for the items above, and access to the supported AI sites, so the bar can appear in those tabs and nowhere else. No history, no cookies, no other websites.
+
+SUPPORTED PLATFORMS
+The major AI assistants. The bar appears inside your chats on the supported AI sites and nowhere else on the web, and your vault keeps one capsule per AI, labelled by where it came from.
+
+Your Capsule. A(i) personality, in a file, yours to keep. Forever.

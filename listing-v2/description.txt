@@ -1,0 +1,35 @@
+STORE SUMMARY (the store allows 132 characters; the summary line below is exactly 120 characters)
+Your AI knows you. Take that with you. Compile your AI's self-report into a capsule, in your tab, and move it to any AI.
+
+================================================================
+
+DETAILED DESCRIPTION (paste from the hook line to the end)
+
+Your AI knows you. Take that with you.
+
+THE PROBLEM
+You have spent months teaching your AI how you work: your preferences, your rules, your people, your projects. Switch AIs and all of that stays behind, locked inside one company's product. Starting over means re-teaching everything, from memory, by hand.
+
+WHAT CLONEMY.AI DOES
+This extension lives inside your AI's chat tab and walks you through three steps:
+
+1. Put the request in. One click places the clonemy.ai extraction request into the chat box. The extension never presses send. You do.
+2. Your AI writes its self-report. It answers with a structured document in the open Capsule Format: who it is to you, your preferences, your rules, your people, your projects and open loops, across 11 sections.
+3. Compile it, in the tab. The extension recognizes the finished report, compiles it locally into one file, capsule.md, and downloads it. Nothing is uploaded, because nothing leaves the browser.
+
+Send capsule.md to any other AI, with the install line the capsule carries inside it, and that AI picks up as yours: same rules, same people, same open loops.
+
+WHY IT IS DIFFERENT
+You own the file. A capsule is a plain document on your own disk, yours to keep, back up, and recompile whenever the relationship changes. It is not a setting buried inside someone else's product.
+The format is open. The Capsule Format is published at clonemy.ai/format, and a capsule compiled by this extension is the same artifact as one compiled on the website.
+It works across AIs. One capsule moves between ChatGPT, Claude, Gemini, Grok, and Perplexity, instead of living inside a single one.
+It is tested like it matters. Capsules are restored into fresh chats and scored, so a moved AI is checked against the original, not just hoped for.
+
+PRIVACY, PLAINLY
+Nothing leaves your browser. The extension makes zero network requests: no fetch, no XMLHttpRequest, no WebSocket, no analytics, no telemetry, anywhere in its code. The code is plain, readable, dependency-free JavaScript, and anyone can inspect it and check.
+The only data stored is a small usage tally: which of your AIs you use, counted by days and sessions, kept in your browser's own local storage so the extension can recognize your regular AI. The popup shows the tally in plain numbers and gives you an erase button.
+
+SUPPORTED PLATFORMS
+ChatGPT, Claude, Gemini, Grok, and Perplexity.
+
+Your AI knows you. Take that with you.
